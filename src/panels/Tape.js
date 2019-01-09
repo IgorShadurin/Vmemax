@@ -100,6 +100,16 @@ import picter97 from '../img/97.jpg';
 import picter98 from '../img/98.jpg';
 import picter99 from '../img/99.jpg';
 import picter100 from '../img/100.jpg';
+import picter101 from '../img/101.jpg';
+import picter102 from '../img/102.jpg';
+import picter103 from '../img/103.jpg';
+import picter104 from '../img/104.jpg';
+import picter105 from '../img/105.jpg';
+import picter106 from '../img/106.jpg';
+import picter107 from '../img/107.jpg';
+import picter108 from '../img/108.jpg';
+
+
 
 import Gallery from 'react-photo-gallery';
 
@@ -271,8 +281,8 @@ const PHOTO_SET = [
   },
   {
     src: picter34,
-    width: 1,
-    height: 1
+    width: 2,
+    height: 3
   },
   {
     src: picter35,
@@ -331,8 +341,8 @@ const PHOTO_SET = [
   },
   {
     src: picter46,
-    width: 1,
-    height: 1
+    width: 3,
+    height: 2
   },
   {
     src: picter47,
@@ -341,8 +351,8 @@ const PHOTO_SET = [
   },
   {
     src: picter48,
-    width: 1,
-    height: 1
+    width: 3,
+    height: 2
   },
   {
     src: picter49,
@@ -376,13 +386,13 @@ const PHOTO_SET = [
   },
   {
     src: picter55,
-    width: 1,
-    height: 1
+    width: 3,
+    height: 2
   },
   {
     src: picter56,
-    width: 1,
-    height: 1
+    width: 3,
+    height: 2
   },
   {
     src: picter57,
@@ -436,8 +446,8 @@ const PHOTO_SET = [
   },
   {
     src: picter67,
-    width: 1,
-    height: 1
+    width: 3,
+    height: 2
   },
   {
     src: picter68,
@@ -446,8 +456,8 @@ const PHOTO_SET = [
   },
   {
     src: picter69,
-    width: 1,
-    height: 1
+    width: 3,
+    height: 2
   },
   {
     src: picter70,
@@ -471,8 +481,8 @@ const PHOTO_SET = [
   },
   {
     src: picter74,
-    width: 1,
-    height: 1
+    width: 3,
+    height: 2
   },
   {
     src: picter75,
@@ -486,7 +496,7 @@ const PHOTO_SET = [
   },
   {
     src: picter77,
-    width: 1,
+    width: 2,
     height: 1
   },
   {
@@ -501,8 +511,8 @@ const PHOTO_SET = [
   },
   {
     src: picter80,
-    width: 1,
-    height: 1
+    width: 3,
+    height: 2
   },
   {
     src: picter81,
@@ -511,8 +521,8 @@ const PHOTO_SET = [
   },
   {
     src: picter82,
-    width: 1,
-    height: 1
+    width: 2,
+    height: 3
   },
   {
     src: picter83,
@@ -521,13 +531,13 @@ const PHOTO_SET = [
   },
   {
     src: picter84,
-    width: 1,
-    height: 1
+    width: 3,
+    height: 2
   },
   {
     src: picter85,
-    width: 1,
-    height: 1
+    width: 3,
+    height: 2
   },
   {
     src: picter86,
@@ -541,8 +551,8 @@ const PHOTO_SET = [
   },
   {
     src: picter88,
-    width: 1,
-    height: 1
+    width: 3,
+    height: 2
   },
   {
     src: picter89,
@@ -581,8 +591,8 @@ const PHOTO_SET = [
   },
   {
     src: picter96,
-    width: 1,
-    height: 1
+    width: 2,
+    height: 3
   },
   {
     src: picter97,
@@ -591,18 +601,58 @@ const PHOTO_SET = [
   },
   {
     src: picter98,
-    width: 1,
-    height: 1
+    width: 2,
+    height: 3
   },
   {
     src: picter99,
+    width: 3,
+    height: 2
+  },
+  {
+    src: picter100,
+    width: 3,
+    height: 2
+  },
+  {
+    src: picter101,
+    width: 3,
+    height: 2
+  },
+  {
+    src: picter102,
     width: 1,
     height: 1
   },
   {
-    src: picter100,
+    src: picter103,
     width: 1,
     height: 1
+  },
+  {
+    src: picter104,
+    width: 3,
+    height: 2
+  },
+  {
+    src: picter105,
+    width: 3,
+    height: 2
+  },
+  {
+    src: picter106,
+    width: 1,
+    height: 1
+  },
+  {
+    src: picter107,
+    width: 3,
+    height: 2
+  },
+  {
+    src: picter108,
+    width: 3,
+    height: 2
   }
 ];
 class Tape extends React.Component {
