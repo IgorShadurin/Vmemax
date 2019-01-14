@@ -7,10 +7,15 @@ import connect from '@vkontakte/vkui-connect';
 
 class Create extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.actionServer = 'https://testeron.pro/';
+        this.appId=6787772;
+        //console.log(this.props.app);
+       this.props.app.setState({
+          createState:this
+        });
 
         this.state = {
             topText: '',
@@ -29,11 +34,9 @@ class Create extends React.Component {
         console.log('componentDidMount');
         if (!this.props.app.connectSubscribed) {
             console.log('Do subscribe');
-            this.props.app.setState({
-                connectSubscribed: true
-            });
+            this.props.app.connectSubscribed= true;
             connect.subscribe(this.connector);
-            console.log(this.props.app);
+            //console.log(this.props.app);
 
         }
     }
@@ -51,7 +54,7 @@ class Create extends React.Component {
     }
 
     connector(e) {
-        let self = this;
+        let self = this.props.app.state.createState;
 
         switch (e.detail.type) {
             case 'VKWebAppGetUserInfoResult':
@@ -119,7 +122,7 @@ class Create extends React.Component {
             });
             self.vkGetAlbumId();
         } else {
-            connect.send("VKWebAppGetAuthToken", {"app_id": 6763470, "scope": "photos"});
+            connect.send("VKWebAppGetAuthToken", {"app_id": this.appId, "scope": "photos"});
         }
     }
 
@@ -241,7 +244,7 @@ class Create extends React.Component {
     _handleSaveButton() {
         let canvas = document.getElementById('memesCanvas');
         canvas.toBlob((result) => {
-            //console.log(result);
+            console.log(result);
             this.uploadFile(result);
         }, 'image/jpeg');
         //console.log(canvasimage);

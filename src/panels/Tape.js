@@ -663,6 +663,7 @@ class Tape extends React.Component {
 	}
 }
 drawThisImage(image) {
+  console.log('RIGHT HETRE');
 this.props.app.setState({
 selectedImage: image,
 activeStory:'create'

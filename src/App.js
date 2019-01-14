@@ -17,8 +17,10 @@ class App extends React.Component {
         this.state = {
             activeStory: 'tape',
             selectedImage: null,
-            connectSubscribed: false
+            createState:null
         };
+
+        this.connectSubscribed=false;
         this.onStoryChange = this.onStoryChange.bind(this);
     }
 
