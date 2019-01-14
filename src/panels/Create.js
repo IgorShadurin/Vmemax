@@ -131,7 +131,7 @@ class Create extends React.Component {
         if (this.state.apiAlbumId) {
             this.vkUploadPhoto();
         } else if (state === 'on_albums_received') {
-            let testeronAlbum = data.response.items.filter(item => item.title === "Testeron");
+            let testeronAlbum = data.response.items.filter(item => item.title === "Vmeme");
             testeronAlbum = testeronAlbum.length ? testeronAlbum[0] : null;
             if (testeronAlbum) {
                 console.log('album found');
@@ -144,8 +144,8 @@ class Create extends React.Component {
                 connect.send("VKWebAppCallAPIMethod", {
                     "method": "photos.createAlbum",
                     "params": {
-                        "title": "Testeron",
-                        "description": "Это приватный альбом, созданный приложением Тестерон для хранения загруженных вами картинок.",
+                        "title": "Vmeme",
+                        "description": "Это приватный альбом, созданный приложением Vmeme для хранения загруженных вами картинок.",
                         "privacy_view": "nobody",
                         "v": "5.92",
                         "access_token": self.state.apiToken
