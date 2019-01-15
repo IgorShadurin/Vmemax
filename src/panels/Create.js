@@ -1,5 +1,5 @@
 import React from 'react';
-import {Panel, Input, Button, FormLayoutGroup, PanelHeader, FormLayout} from '@vkontakte/vkui';
+import {Panel, Input, Button, FormLayoutGroup, PanelHeader, FormLayout, Spinner, ScreenSpinner } from '@vkontakte/vkui';
 import Icon24Download from '@vkontakte/icons/dist/24/download';
 import ReactCanvas from './ReactCanvas';
 import connect from '@vkontakte/vkui-connect';
@@ -20,6 +20,7 @@ class Create extends React.Component {
         this.state = {
             topText: '',
             lowText: ''
+            
         };
 
         this._handleLowInputChange = this._handleLowInputChange.bind(this);
@@ -194,6 +195,8 @@ class Create extends React.Component {
                     },
                     "request_id": "photos_save"
                 });
+                // todo убрать крутялку и показать сообщение где мем
+                 this.props.app.setState({ popout: null }) 
             } else {
                 alert('Не удалось загрузить фото. Попробуйте загрузить позже или выберите другой файл');
             }
@@ -242,11 +245,14 @@ class Create extends React.Component {
     }
 
     _handleSaveButton() {
+      // todo показать крутялку
+    this.props.app.setState({ popout: <ScreenSpinner /> });
         let canvas = document.getElementById('memesCanvas');
         canvas.toBlob((result) => {
             console.log(result);
             this.uploadFile(result);
         }, 'image/jpeg');
+       
         //console.log(canvasimage);
 
         //const w = window.open('about:blank', 'img');
